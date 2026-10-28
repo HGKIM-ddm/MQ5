@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Composer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LXSComposer.xsd">
+  <Header>LXS Composer, LX Semicon Co., LTD.</Header>
+  <Dirs>
+	<Dir Name="Composer" Path="$STARTUP$" />
+    <Dir Name="Data" Path="$STARTUP$\Data" Essential="true" />
+    <Dir Name="CMSIS" Path="$STARTUP$\CMSIS\$CHIP$" Essential="true" />
+	<Dir Name="COMMON" Path="$STARTUP$\CMSIS\$CHIP$" Essential="true" />
+    <Dir Name="Secure" Path="$STARTUP$\Secure" />
+    <Dir Name="Out" Path="$STARTUP$\Out" Essential="true" />
+    <Dir Name="Project" Path="$STARTUP$\Project" Essential="true" />
+    <Dir Name="Template" Path="$STARTUP$\Template" Essential="true" />
+    <Dir Name="FreeRTOS" Path="$STARTUP$\FreeRTOS" />
+    <Dir Name="FreeRTOSHeader" Path="$STARTUP$\FreeRTOS\include" />
+    <Dir Name="FreeRTOSPorting" Path="$STARTUP$\FreeRTOS\porting" />
+    <Dir Name="FreeRTOSHeap" Path="$STARTUP$\FreeRTOS\heap" />
+    <Dir Name="FreeRTOSMpu" Path="$STARTUP$\FreeRTOS\mpu" />
+    <Dir Name="FreeRTOSConfig" Path="$STARTUP$\FreeRTOS\config" />
+    <Dir Name="FlashLoader" Path="$STARTUP$\FlashLoader\$CHIP$" />
+    <Dir Name="FOC" Path="$STARTUP$\FOC" />
+  </Dirs>
+  <Files>
+	<File Name="TEST" DirName="Composer" FileName="TEST.txt" />
+	<File Name="TESTRHP" DirName="Composer" FileName="TEST.txt.rhp" />
+	<File Name="PUB" DirName="Composer" FileName="LXSComposer.pub" />
+	<File Name="PBE" DirName="Composer" FileName="LXSComposer.pbe" />
+	<File Name="LIC" DirName="Composer" FileName="LXSComposer.lic" />
+	<File Name="Data" DirName="Data" FileName="$CHIP$_Data.bin" />
+	<File Name="Project" DirName="Project" FileName="$AUXNAME$.lcp" />
+	<File Name="Pinmap" DirName = "Secure" FileName="$CHIP$_Pinmap.xlsx" />
+    <File Name="PinmapConfig" DirName="Secure" FileName="PinmapInfo.ini" />
+	<File Name="ChipHeader" DirName="CMSIS" FileName="$CHIP$.h" />
+	<File Name="Startup" DirName="CMSIS" FileName="startup_$CHIP$_$TARGET$.s" />
+	<File Name="Common" DirName="COMMON" FileName="common.h" />
+    <File Name="InfoClock" DirName="Secure" FileName="ClockInfo.ini" />
+    <File Name="InfoPower" DirName="Secure" FileName="PowerInfo.ini" />
+    <File Name="InfoDMA" DirName="Secure" FileName="DmaInfo.ini" />
+    <File Name="InfoMFTR" DirName="Secure" FileName="MftrInfo.ini" />
+    <File Name="InfoMFTP" DirName="Secure" FileName="MftpInfo.ini" />
+    <File Name="InfoChip" DirName="Secure" FileName="ChipInfo.ini" />
+    <File Name="InfoADC" DirName="Secure" FileName="AdcInfo.ini" />
+    <File Name="InfoFlashTiming" DirName="Secure" FileName="FlashTiming.ini" />
+    <File Name="InfoNmiInterrupt" DirName="Secure" FileName="InterruptInfo.ini" />
+    <File Name="FreeRTOSConfig" DirName="FreeRTOSConfig" FileName="FreeRTOSConfig.h" />
+	<File Name="FreeRTOSHeap" DirName="FreeRTOSHeap" FileName="heap_$AUXNAME$.c" />
+	<File Name="ICF" DirName="Template" FileName="generic.icf" />
+    <File Name="FOCLIB" DirName="FOC" FileName="foc_sensorless_$AUXNAME$shunt.lib" />
+  </Files>
+  <DestDirs>
+	<DestDir Name="Default" Path="$DEFAULT$" Fallback="$DEFAULT$" />
+	<DestDir Name="Work" Path="$WORK$" Fallback="$WORK$" />
+	<DestDir Name="CMSIS" Path="$WORK$" Fallback="$WORK$\CMSIS" />
+	<DestDir Name="Application" Path="$WORK$" Fallback="$WORK$\Application" />
+	<DestDir Name="FreeRTOS" Path="$WORK$" Fallback="$WORK$\Kernel" />
+	<DestDir Name="FreeRTOSHeader" Path="$WORK$" Fallback="$WORK$\Kernel\include" />
+	<DestDir Name="FOC" Path="$WORK$" Fallback="$WORK$\FOC" />
+	<DestDir Name="FlashLoader" Path="$WORK$" Fallback="$WORK$\FlashLoader" />
+  </DestDirs>
+  <DestFiles>
+	<DestFile Name="System" DirName="CMSIS" FileName="system_$CHIP$.c" />
+	<DestFile Name="SystemHeader" DirName="CMSIS" FileName="system_$CHIP$.h" />
+	<DestFile Name="Device" DirName="CMSIS" FileName="device_$CHIP$.c" />
+	<DestFile Name="DeviceHeader" DirName="CMSIS" FileName="device_$CHIP$.h" />
+	<DestFile Name="Interrupt" DirName="CMSIS" FileName="interrupt_$CHIP$.c" />
+	<DestFile Name="InterruptHeader" DirName="CMSIS" FileName="interrupt_$CHIP$.h" />
+	<DestFile Name="Main" DirName="Application" FileName="main.c" />
+	<DestFile Name="Startup" DirName="CMSIS" FileName="startup_$CHIP$.s" />
+	<DestFile Name="Common" DirName="CMSIS" FileName="common.h" />
+	<DestFile Name="ChipHeader" DirName="CMSIS" FileName="$CHIP$.h" />
+	<DestFile Name="SVD" DirName="CMSIS" FileName="$CHIP$.svd" />
+	<DestFile Name="SFR" DirName="CMSIS" FileName="$CHIP$.sfr" />
+	<DestFile Name="Board" DirName="FlashLoader" FileName="" />
+	<DestFile Name="EWW" DirName="Work" FileName="$PROJECT$.eww" />
+	<DestFile Name="EWP" DirName="Work" FileName="$PROJECT$.ewp" />
+	<DestFile Name="EWD" DirName="Work" FileName="$PROJECT$.ewd" />
+	<DestFile Name="ICF" DirName="Work" FileName="$PROJECT$.icf" />
+	<DestFile Name="FreeRTOSConfig" DirName="FreeRTOS" FileName="FreeRTOSConfig.h" />
+	<DestFile Name="FreeRTOSHeap" DirName="FreeRTOS" FileName="heap_$AUXNAME$.c" />
+	<DestFile Name="FOCLIB" DirName="FOC" FileName="foc_sensorless_$AUXNAME$shunt.lib" />
+  </DestFiles>
+</Composer>
