@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_DEPRECATED_DEFINITION</Define>
               <Undefine></Undefine>
-              <IncludePath>C:\Users\admin\Desktop\5_AAF\Lx\LXS Composer\MQ5\CMSIS;C:\Users\admin\Desktop\5_AAF\Lx\LXS Composer\MQ5\Application;.\CMSIS;.\Application</IncludePath>
+              <IncludePath>.\CMSIS;.\Application;.\Application\Bsw\Common;.\Application\Bsw\Mcal</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,6 +413,16 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Application\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bsw/Mcal</GroupName>
+          <Files>
+            <File>
+              <FileName>Dio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Bsw\Mcal\Dio.c</FilePath>
             </File>
           </Files>
         </Group>
