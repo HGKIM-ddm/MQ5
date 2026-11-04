@@ -424,6 +424,11 @@
               <FileType>1</FileType>
               <FilePath>.\Application\Bsw\Mcal\Dio.c</FilePath>
             </File>
+            <File>
+              <FileName>Tms.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Bsw\Mcal\Tms.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
