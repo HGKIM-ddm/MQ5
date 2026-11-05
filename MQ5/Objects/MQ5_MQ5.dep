@@ -52,3 +52,12 @@ I (CMSIS\device_LX61101.h)(0x6AE7E39E)
 I (CMSIS\LX61101.h)(0x6AE7E39E)
 I (C:\Users\bb406\AppData\Local\Arm\Packs\ARM\CMSIS\6.4.0\CMSIS\Core\Include\core_cm3.h)(0x6AE7E1CC)
 I (CMSIS\system_LX61101.h)(0x6AE7E39F)
+F (.\Application\Bsw\Mcal\Adc.c)(0x6AEBD21A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./CMSIS -I ./Application -I ./Application/Bsw/Common -I ./Application/Bsw/Mcal-I./RTE/_MQ5-IC:/Users/bb406/AppData/Local/Arm/Packs/ARM/CMSIS/6.4.0/CMSIS/Core/Include-IC:/Users/bb406/AppData/Local/Arm/Packs/ARM/Cortex_DFP/1.1.0/Device/ARMCM3/Include-IC:/Users/bb406/AppData/Local/Arm/Packs/ARM/Cortex_DFP/1.1.0/Device/ARM/ARMCM3/Include-D__UVISION_VERSION="543" -DARMCM3 -D_RTE_ -DUSE_DEPRECATED_DEFINITION-o ./objects/adc.o -MMD)
+I (Application\Bsw\Mcal\Adc.h)(0x6AEBD21A)
+I (Application\Bsw\Common\Std_Types.h)(0x6AE9A0CA)
+I (CMSIS\common.h)(0x6AE7E39E)
+I (Application\Bsw\Mcal\Adc_Cfg.h)(0x6AEBD21A)
+I (CMSIS\device_LX61101.h)(0x6AE7E39E)
+I (CMSIS\LX61101.h)(0x6AE7E39E)
+I (C:\Users\bb406\AppData\Local\Arm\Packs\ARM\CMSIS\6.4.0\CMSIS\Core\Include\core_cm3.h)(0x6AE7E1CC)
+I (CMSIS\system_LX61101.h)(0x6AE7E39F)
