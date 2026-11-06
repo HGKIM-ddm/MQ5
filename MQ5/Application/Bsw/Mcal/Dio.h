@@ -13,7 +13,7 @@
 #ifndef DIO_H
 #define DIO_H
 
-#include "Std_Types.h"
+#include "Global_Fixed_Cfg.h"
 #include "Dio_Cfg.h"
 
 typedef uint8 Dio_LevelType;    /* STD_HIGH / STD_LOW */

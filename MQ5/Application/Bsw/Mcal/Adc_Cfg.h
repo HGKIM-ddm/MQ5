@@ -13,7 +13,7 @@
 #ifndef ADC_CFG_H
 #define ADC_CFG_H
 
-#include "Std_Types.h"
+#include "Global_Fixed_Cfg.h"
 
 typedef uint8 Adc_ChannelType;
 

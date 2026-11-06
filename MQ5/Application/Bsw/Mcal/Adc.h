@@ -13,7 +13,7 @@
 #ifndef ADC_H
 #define ADC_H
 
-#include "Std_Types.h"
+#include "Global_Fixed_Cfg.h"
 #include "Adc_Cfg.h"
 
 uint16 Adc_GetValue(Adc_ChannelType ID);           /* 1회 변환값 (10bit, 0~1023) */

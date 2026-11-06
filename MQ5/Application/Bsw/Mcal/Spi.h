@@ -13,7 +13,7 @@
 #ifndef SPI_H
 #define SPI_H
 
-#include "Std_Types.h"
+#include "Global_Fixed_Cfg.h"
 
 uint16 Spi_Transfer(uint16 TxData);                /* 16bit 1워드 송신 후 수신값 반환 */
 
