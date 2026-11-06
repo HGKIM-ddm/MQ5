@@ -439,6 +439,11 @@
               <FileType>1</FileType>
               <FilePath>.\Application\Bsw\Mcal\Adc.c</FilePath>
             </File>
+            <File>
+              <FileName>Lin.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Bsw\Mcal\Lin.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

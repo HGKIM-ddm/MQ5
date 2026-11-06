@@ -4,6 +4,7 @@
 #include "system_LX61101.h"
 #include "device_LX61101.h"
 #include "interrupt_LX61101.h"
+#include "Lin.h"
 
 int main(void)
 {
@@ -26,15 +27,16 @@ int main(void)
     /* User Code */
     //EnableWDT();
     //RefreshWDT();
-    //StartTMS00();
-    //StartTMS01();
+    StartTMS00();
+    StartTMS01();
     //EnableCMC0();
     //EnableCMC1();
     //EnableCMC2();
     //EnableSPI1();
     //StartMFTR1();
     //StartADC0();
-    //EnableLIN();
+    Lin_Init();         /* 차종별 LIN 필터 설정 (EnableLIN 전) */
+    EnableLIN();
 
     while(1);
 }
