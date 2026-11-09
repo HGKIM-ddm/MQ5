@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\MQ5.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\MQ5.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Fri Nov  6 14:12:23 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon Nov  9 10:10:09 2026
 <BR><P>
 <H3>Maximum Stack Usage =         24 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -106,7 +106,7 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lx61101.o(.text)
 </UL>
-<P><STRONG><a name="[76]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[79]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[49]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -116,15 +116,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[77]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[7a]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[78]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[7b]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[79]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[7c]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[7a]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[7d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[7b]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[7e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, startup_lx61101.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lx61101.o(RESET)
@@ -342,9 +342,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[7c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[7f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[75]"></a>EnableLIN</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, device_lx61101.o(.text.EnableLIN))
+<P><STRONG><a name="[78]"></a>EnableLIN</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, device_lx61101.o(.text.EnableLIN))
+<BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[74]"></a>EnableWDT</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, device_lx61101.o(.text.EnableWDT))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -399,7 +403,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lx61101.o(RESET)
 </UL>
-<P><STRONG><a name="[74]"></a>Lin_Init</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, lin.o(.text.Lin_Init))
+<P><STRONG><a name="[77]"></a>Lin_Init</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, lin.o(.text.Lin_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -426,19 +430,23 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lx61101.o(RESET)
 </UL>
-<P><STRONG><a name="[6f]"></a>SetupADC0</STRONG> (Thumb, 146 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupADC0))
+<P><STRONG><a name="[65]"></a>RefreshWDT</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, device_lx61101.o(.text.RefreshWDT))
+<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_Refresh
+</UL>
+
+<P><STRONG><a name="[71]"></a>SetupADC0</STRONG> (Thumb, 146 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupADC0))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[69]"></a>SetupCMC0</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC0))
+<P><STRONG><a name="[6b]"></a>SetupCMC0</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC0))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6a]"></a>SetupCMC1</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC1))
+<P><STRONG><a name="[6c]"></a>SetupCMC1</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC1))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6b]"></a>SetupCMC2</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC2))
+<P><STRONG><a name="[6d]"></a>SetupCMC2</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupCMC2))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -450,54 +458,54 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[65]"></a>SetupGPIO</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupGPIO))
+<P><STRONG><a name="[67]"></a>SetupGPIO</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupGPIO))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[71]"></a>SetupInterrupt</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupInterrupt))
+<P><STRONG><a name="[73]"></a>SetupInterrupt</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupInterrupt))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[70]"></a>SetupLIN</STRONG> (Thumb, 240 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupLIN))
+<P><STRONG><a name="[72]"></a>SetupLIN</STRONG> (Thumb, 240 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupLIN))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6e]"></a>SetupMFTR1</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupMFTR1))
+<P><STRONG><a name="[70]"></a>SetupMFTR1</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupMFTR1))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6d]"></a>SetupMFTRC</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupMFTRC))
+<P><STRONG><a name="[6f]"></a>SetupMFTRC</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupMFTRC))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[64]"></a>SetupPM</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupPM))
+<P><STRONG><a name="[66]"></a>SetupPM</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupPM))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>SetupSPI1</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupSPI1))
+<P><STRONG><a name="[6e]"></a>SetupSPI1</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupSPI1))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[67]"></a>SetupTMS00</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupTMS00))
+<P><STRONG><a name="[69]"></a>SetupTMS00</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupTMS00))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[68]"></a>SetupTMS01</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupTMS01))
+<P><STRONG><a name="[6a]"></a>SetupTMS01</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupTMS01))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[66]"></a>SetupWDT</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupWDT))
+<P><STRONG><a name="[68]"></a>SetupWDT</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, device_lx61101.o(.text.SetupWDT))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[46]"></a>SramEccEnable</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, system_lx61101.o(.text.SramEccEnable))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lx61101.o(.text)
 </UL>
-<P><STRONG><a name="[72]"></a>StartTMS00</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, device_lx61101.o(.text.StartTMS00))
+<P><STRONG><a name="[75]"></a>StartTMS00</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, device_lx61101.o(.text.StartTMS00))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[73]"></a>StartTMS01</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, device_lx61101.o(.text.StartTMS01))
+<P><STRONG><a name="[76]"></a>StartTMS01</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, device_lx61101.o(.text.StartTMS01))
 <BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -618,36 +626,44 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMS0C_Handler
 </UL>
 
-<P><STRONG><a name="[45]"></a>main</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[64]"></a>Wdg_Refresh</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, wdg.o(.text.Wdg_Refresh))
+<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RefreshWDT
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[45]"></a>main</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = main &rArr; SetupEssential
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lin_Init
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupInterrupt
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableLIN
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupLIN
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupADC0
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupMFTR1
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupMFTRC
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupSPI1
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC2
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC1
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC0
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTMS01
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupTMS01
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTMS00
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupTMS00
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupWDT
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupGPIO
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupPM
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_Refresh
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lin_Init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupInterrupt
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableLIN
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupLIN
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupADC0
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupMFTR1
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupMFTRC
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupSPI1
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC2
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC1
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupCMC0
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTMS01
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupTMS01
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTMS00
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupTMS00
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableWDT
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupWDT
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupGPIO
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupPM
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetupEssential
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[7d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[80]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[7e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[81]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[7f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[82]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
