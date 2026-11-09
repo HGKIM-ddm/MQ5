@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Adc.h
+ * File        : Dio.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -8,14 +8,18 @@
  *                 - CDD
  *                 - MCAL          <== HERE
  *                 - Common
- * Description : ADC 인터페이스 (채널별 변환값 읽기)
+ * Description : 디지털 입출력 인터페이스 (타입, 함수 선언)
  ***********************************************************************************************************************/
-#ifndef ADC_H
-#define ADC_H
+#ifndef DIO_H
+#define DIO_H
 
-#include "Global_Fixed_Cfg.h"
-#include "Adc_Cfg.h"
+#include "Config.h"
+#include "Dio_Tune.h"
 
-uint16 Adc_GetValue(Adc_ChannelType ID);           /* 1회 변환값 (10bit, 0~1023) */
+typedef uint8 Dio_LevelType;    /* STD_HIGH / STD_LOW */
 
-#endif /* ADC_H */
+void          Dio_WriteChannel(Dio_ChannelType ID, Dio_LevelType Level);
+Dio_LevelType Dio_ReadChannel(Dio_ChannelType ID);
+Dio_LevelType Dio_FlipChannel(Dio_ChannelType ID);
+
+#endif /* DIO_H */

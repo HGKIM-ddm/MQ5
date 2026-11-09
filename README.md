@@ -57,16 +57,35 @@ MQ5\
          ├─ Service\
          ├─ Eal\
          ├─ Cdd\
+         │   └─ Drv8889\
          ├─ Mcal\
+         │   ├─ Adc\
+         │   ├─ Dio\
+         │   ├─ Lin\
+         │   ├─ Spi\
+         │   ├─ Tms\
+         │   └─ Wdg\
          └─ Common\
 ```
+
+- 모듈마다 폴더 하나 (`모듈.c`, `모듈.h`, `모듈_Tune.h`).
+- 새 모듈을 추가하면 Keil Include Path 와 프로젝트 그룹(`Mcal/모듈`)에도 추가한다.
 
 ## 4. 모듈 목록
 
 | 계층 | 모듈 | 파일 | 내용 | 상태 |
 |---|---|---|---|---|
-| Common | Std_Types | `Bsw\Common\Std_Types.h` | 공통 타입 (`common.h` 포함) | 작성 |
-| MCAL | Dio | `Bsw\Mcal\Dio.c / Dio.h / Dio_Cfg.h` | 디지털 입출력 핀 읽기/쓰기 | 작성 |
+| Common | Config | `Bsw\Common\Config.h` | 공통 타입 (`common.h` 포함), 코드명 / 차종 / AAF 번호 값 | 작성 |
+| Common | Config | `Bsw\Common\Config_Tune.h` | 코드명 선택 (빌드 시 변경) | 작성 |
+| MCAL | Dio | `Bsw\Mcal\Dio\` | 디지털 입출력 핀 읽기/쓰기 (Composer `PB_GPxxx` 사용) | 작성 |
+| MCAL | Tms | `Bsw\Mcal\Tms\` | 1ms 틱 (TMS01), 1us 틱 (TMS00) | 작성 |
+| MCAL | Spi | `Bsw\Mcal\Spi\` | SPI1 16bit 송수신 (Composer 함수 사용) | 작성 |
+| MCAL | Adc | `Bsw\Mcal\Adc\` | 채널별 변환값 (Composer 함수 사용) | 작성 |
+| MCAL | Lin | `Bsw\Mcal\Lin\` | 차종별 필터, 프레임 수신 / 응답 | 작성 |
+| MCAL | Wdg | `Bsw\Mcal\Wdg\` | 워치독 리프레시, 리셋 원인 | 작성 |
+| MCAL | Mftr | - | STEP 펄스 시작 / 정지, 펄스 콜백 | 예정 |
+| MCAL | DFlash | - | EEPROM (Data Flash) 읽기 / 쓰기 | 예정 (LX 자료 대기) |
+| CDD | Drv8889 | `Bsw\Cdd\Drv8889\` | DRV8889-Q1 핀 / SPI 레지스터 제어 | 작성 |
 
 ### Dio 채널
 
@@ -104,6 +123,15 @@ MQ5\
 - AUTOSAR 명명 규칙을 참고한다 (함수 `Module_FunctionName`, 매크로 `MODULE_NAME`).
 - 데이터시트·회로도에서 실제로 쓰는 약어는 그대로 사용한다 (예: `DIO_CH_NSCS`).
 
+### 설정 파일
+
+| 구분 | 이름 | 예 |
+|---|---|---|
+| 거의 고정 | 접미어 없음 | `Config.h` |
+| 바꿀 것 (차종 선택, 핀, ID, 튜닝 값) | `_Tune` | `Config_Tune.h`, `Dio_Tune.h`, `Drv8889_Tune.h` |
+
+- 한 파일 안에서만 쓰는 define 은 `.c` 에 두고 `[파일명 내부 전용]` 주석을 단다.
+
 ## 6. 빌드 환경
 
 | 항목 | 값 |
@@ -111,7 +139,7 @@ MQ5\
 | IDE | Keil µVision (MDK 5.43a) |
 | 컴파일러 | Arm Compiler 6 |
 | Define | `USE_DEPRECATED_DEFINITION` (`common.h` 의 `STD_HIGH`, `TRUE`, `NULL_PTR` 등 활성화) |
-| Include Path | `.\CMSIS;.\Application;.\Application\Bsw\Common;.\Application\Bsw\Mcal` |
+| Include Path | `.\CMSIS;.\Application;.\Application\Bsw\Common;` + 모듈 폴더 (`.\Application\Bsw\Mcal\Dio` … `.\Application\Bsw\Cdd\Drv8889`) |
 
 - `common.h` 에 `ERROR`, `SUCCESS`, `ENABLE`, `DISABLE` enum 이 정의되어 있으므로 이 이름은 다른 용도로 사용하지 않는다.
 - LXS Composer 에서 Generate 할 때 **Create Build Template 은 끈다** (켜면 `MQ5.uvprojx` 설정이 초기화됨).

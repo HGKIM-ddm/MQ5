@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Dio_Cfg.h
+ * File        : Dio_Tune.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -10,10 +10,10 @@
  *                 - Common
  * Description : 디지털 입출력 채널 ID 정의 (MQ5_AAF_V0.0 보드 기준)
  ***********************************************************************************************************************/
-#ifndef DIO_CFG_H
-#define DIO_CFG_H
+#ifndef DIO_TUNE_H
+#define DIO_TUNE_H
 
-#include "Global_Fixed_Cfg.h"
+#include "Config.h"
 
 typedef uint8 Dio_ChannelType;
 
@@ -27,4 +27,4 @@ typedef uint8 Dio_ChannelType;
 
 #define DIO_CH_COUNT        (5U)
 
-#endif /* DIO_CFG_H */
+#endif /* DIO_TUNE_H */

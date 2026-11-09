@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Wdg.h
+ * File        : Adc.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -8,14 +8,14 @@
  *                 - CDD
  *                 - MCAL          <== HERE
  *                 - Common
- * Description : 워치독 인터페이스 
+ * Description : ADC 인터페이스 (채널별 변환값 읽기)
  ***********************************************************************************************************************/
-#ifndef WDG_H
-#define WDG_H
+#ifndef ADC_H
+#define ADC_H
 
-#include "Global_Fixed_Cfg.h"
+#include "Config.h"
+#include "Adc_Tune.h"
 
-void    Wdg_Refresh(void);                                  /* WDT 리프레시 (메인 루프에서 1.671s 안에 호출) */
-boolean Wdg_IsResetByWdt(void);                             /* 마지막 리셋 원인이 WDT 인지 */
+uint16 Adc_GetValue(Adc_ChannelType ID);           /* 1회 변환값 (10bit, 0~1023) */
 
-#endif /* WDG_H */
+#endif /* ADC_H */

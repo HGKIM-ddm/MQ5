@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Dio.h
+ * File        : Wdg.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -8,18 +8,14 @@
  *                 - CDD
  *                 - MCAL          <== HERE
  *                 - Common
- * Description : 디지털 입출력 인터페이스 (타입, 함수 선언)
+ * Description : 워치독 인터페이스 
  ***********************************************************************************************************************/
-#ifndef DIO_H
-#define DIO_H
+#ifndef WDG_H
+#define WDG_H
 
-#include "Global_Fixed_Cfg.h"
-#include "Dio_Cfg.h"
+#include "Config.h"
 
-typedef uint8 Dio_LevelType;    /* STD_HIGH / STD_LOW */
+void    Wdg_Refresh(void);                                  /* WDT 리프레시 (메인 루프에서 1.671s 안에 호출) */
+boolean Wdg_IsResetByWdt(void);                             /* 마지막 리셋 원인이 WDT 인지 */
 
-void          Dio_WriteChannel(Dio_ChannelType ID, Dio_LevelType Level);
-Dio_LevelType Dio_ReadChannel(Dio_ChannelType ID);
-Dio_LevelType Dio_FlipChannel(Dio_ChannelType ID);
-
-#endif /* DIO_H */
+#endif /* WDG_H */

@@ -13,7 +13,7 @@
 #ifndef TMS_H
 #define TMS_H
 
-#include "Global_Fixed_Cfg.h"
+#include "Config.h"
 
 uint32 Tms_GetTickMs(void);                        /* 1 = 1ms (TMS01) */
 uint32 Tms_GetTickUs(void);                        /* 1 = 1us (TMS00) */

@@ -13,8 +13,8 @@
 #ifndef LIN_H
 #define LIN_H
 
-#include "Global_Fixed_Cfg.h"
-#include "Lin_Cfg.h"
+#include "Config.h"
+#include "Lin_Tune.h"
 
 #define LIN_DATA_MAX_BYTE   (8U)                            /* LIN 프레임 최대 데이터 바이트 (버퍼 크기) */
 

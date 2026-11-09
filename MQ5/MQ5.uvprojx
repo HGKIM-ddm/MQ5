@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_DEPRECATED_DEFINITION</Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS;.\Application;.\Application\Bsw\Common;.\Application\Bsw\Mcal</IncludePath>
+              <IncludePath>.\CMSIS;.\Application;.\Application\Bsw\Common;.\Application\Bsw\Mcal\Dio;.\Application\Bsw\Mcal\Tms;.\Application\Bsw\Mcal\Spi;.\Application\Bsw\Mcal\Adc;.\Application\Bsw\Mcal\Lin;.\Application\Bsw\Mcal\Wdg;.\Application\Bsw\Cdd\Drv8889</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,37 +417,72 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Bsw/Mcal</GroupName>
+          <GroupName>Mcal/Dio</GroupName>
           <Files>
             <File>
               <FileName>Dio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Dio.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Dio\Dio.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mcal/Tms</GroupName>
+          <Files>
             <File>
               <FileName>Tms.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Tms.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Tms\Tms.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mcal/Spi</GroupName>
+          <Files>
             <File>
               <FileName>Spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Spi.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Spi\Spi.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mcal/Adc</GroupName>
+          <Files>
             <File>
               <FileName>Adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Adc.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Adc\Adc.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mcal/Lin</GroupName>
+          <Files>
             <File>
               <FileName>Lin.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Lin.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Lin\Lin.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mcal/Wdg</GroupName>
+          <Files>
             <File>
               <FileName>Wdg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Application\Bsw\Mcal\Wdg.c</FilePath>
+              <FilePath>.\Application\Bsw\Mcal\Wdg\Wdg.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Cdd/Drv8889</GroupName>
+          <Files>
+            <File>
+              <FileName>Drv8889.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Bsw\Cdd\Drv8889\Drv8889.c</FilePath>
             </File>
           </Files>
         </Group>

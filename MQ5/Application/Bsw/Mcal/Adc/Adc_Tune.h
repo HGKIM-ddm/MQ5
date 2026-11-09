@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Adc_Cfg.h
+ * File        : Adc_Tune.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -10,10 +10,10 @@
  *                 - Common
  * Description : ADC 채널 ID 정의 (MQ5_AAF_V0.0 보드 기준)
  ***********************************************************************************************************************/
-#ifndef ADC_CFG_H
-#define ADC_CFG_H
+#ifndef ADC_TUNE_H
+#define ADC_TUNE_H
 
-#include "Global_Fixed_Cfg.h"
+#include "Config.h"
 
 typedef uint8 Adc_ChannelType;
 
@@ -23,4 +23,4 @@ typedef uint8 Adc_ChannelType;
 
 #define ADC_CH_COUNT        (1U)
 
-#endif /* ADC_CFG_H */
+#endif /* ADC_TUNE_H */

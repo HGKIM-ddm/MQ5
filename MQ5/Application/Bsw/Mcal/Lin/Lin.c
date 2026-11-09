@@ -50,7 +50,7 @@ static uint32 Lin_ByteToWord(const uint8 *Data)
 }
 
 /*
- * Composer 필터(ICE 기준 고정)를 Lin_Cfg.h 차종 값으로 다시 씀. 진단 프레임(IFCR4/6)은 공통이라 그대로.
+ * Composer 필터(ICE 기준 고정)를 Lin_Tune.h 차종 값으로 다시 씀. 진단 프레임(IFCR4/6)은 공통이라 그대로.
  * SetupLIN() 과 같은 순서 : INIT 모드 진입 대기 → 필터 쓰기 → INIT 해제
  */
 void Lin_Init(void)

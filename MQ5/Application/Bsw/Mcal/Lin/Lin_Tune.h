@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Lin_Cfg.h
+ * File        : Lin_Tune.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -10,11 +10,11 @@
  *                 - Common
  * Description : LIN ID 정의 (기능요구사양서 5.3.2 LIN ID Table 기준)
  ***********************************************************************************************************************/
-#ifndef LIN_CFG_H
-#define LIN_CFG_H
+#ifndef LIN_TUNE_H
+#define LIN_TUNE_H
 
-#include "Global_Fixed_Cfg.h"
-#include "Global_Cfg.h"
+#include "Config.h"
+#include "Config_Tune.h"
 
 typedef uint8 Lin_IdType;
 
@@ -39,7 +39,7 @@ typedef uint8 Lin_IdType;
 #define LIN_SLAVE_RESP          ((Lin_IdType)0x3DU)     /* Slave Response                     */
 
 /* ====================================================================
- * 선택 결과 (Global_Cfg.h 의 VEHICLE_TYPE / AAF_INDEX 에 따라 결정)
+ * 선택 결과 (Config_Tune.h 의 VEHICLE_TYPE / AAF_INDEX 에 따라 결정)
  * ==================================================================== */
 #if (VEHICLE_TYPE == ICE)
 
@@ -64,4 +64,4 @@ typedef uint8 Lin_IdType;
 
 #endif
 
-#endif /* LIN_CFG_H */
+#endif /* LIN_TUNE_H */

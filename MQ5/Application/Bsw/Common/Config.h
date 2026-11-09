@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Global_Fixed_Cfg.h
+ * File        : Config.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -10,8 +10,8 @@
  *                 - Common        <== HERE
  * Description : 모든 계층에서 사용하는 공통 타입 / 고정 정의 (변경 없음)
  ***********************************************************************************************************************/
-#ifndef GLOBAL_FIXED_CFG_H
-#define GLOBAL_FIXED_CFG_H
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include "common.h"
 
@@ -21,7 +21,7 @@
 #endif
 
 /* ====================================================================
- * 코드명 (Global_Cfg.h VEHICLE_CODENAME 선택 값)
+ * 코드명 (Config_Tune.h VEHICLE_CODENAME 선택 값)
  * ==================================================================== */
 #define MQ5_ICE_AAF1        (1U)
 #define MQ5_ICE_AAF2        (2U)
@@ -43,4 +43,4 @@
 #define AAF_2               (2U)
 #define AAF_3               (3U)
 
-#endif /* GLOBAL_FIXED_CFG_H */
+#endif /* CONFIG_H */

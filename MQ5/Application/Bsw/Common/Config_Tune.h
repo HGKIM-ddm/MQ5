@@ -1,5 +1,5 @@
 /***********************************************************************************************************************
- * File        : Global_Cfg.h
+ * File        : Config_Tune.h
  * Layer       : App
  *               RTE
  *               BSW
@@ -10,15 +10,15 @@
  *                 - Common        <== HERE
  * Description : 코드명 선택 (빌드 시 변경) 및 코드명별 설정
  ***********************************************************************************************************************/
-#ifndef GLOBAL_CFG_H
-#define GLOBAL_CFG_H
+#ifndef CONFIG_TUNE_H
+#define CONFIG_TUNE_H
 
-#include "Global_Fixed_Cfg.h"
+#include "Config.h"
 
 /* ====================================================================
  * 선택 항목 (빌드 전 이 한 줄만 변경)
  * ==================================================================== */
-#define VEHICLE_CODENAME    MQ5_ICE_AAF1    /* Global_Fixed_Cfg.h 코드명 중 선택 */
+#define VEHICLE_CODENAME    MQ5_ICE_AAF1    /* Config.h 코드명 중 선택 */
 
 /* ====================================================================
  * 코드명별 설정 (코드명 추가 시 블록 추가)
@@ -48,7 +48,7 @@
     #define AAF_INDEX       AAF_3
 
 #else
-    #error "VEHICLE_CODENAME : Global_Fixed_Cfg.h 코드명 중 선택"
+    #error "VEHICLE_CODENAME : Config.h 코드명 중 선택"
 #endif
 
 /* ====================================================================
@@ -62,4 +62,4 @@
 #error "AAF_INDEX : AAF_1 / AAF_2 / AAF_3"
 #endif
 
-#endif /* GLOBAL_CFG_H */
+#endif /* CONFIG_TUNE_H */
