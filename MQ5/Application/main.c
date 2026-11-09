@@ -5,6 +5,7 @@
 #include "device_LX61101.h"
 #include "interrupt_LX61101.h"
 #include "Lin.h"
+#include "Wdg.h"
 
 int main(void)
 {
@@ -25,7 +26,7 @@ int main(void)
     SetupInterrupt();
 
     /* User Code */
-    //EnableWDT();
+    EnableWDT();
     //RefreshWDT();
     StartTMS00();
     StartTMS01();
@@ -38,5 +39,8 @@ int main(void)
     Lin_Init();         /* 차종별 LIN 필터 설정 (EnableLIN 전) */
     EnableLIN();
 
-    while(1);
+    while(1)
+    {
+        Wdg_Refresh();
+    }
 }

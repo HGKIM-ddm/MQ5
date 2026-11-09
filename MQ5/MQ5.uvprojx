@@ -444,6 +444,11 @@
               <FileType>1</FileType>
               <FilePath>.\Application\Bsw\Mcal\Lin.c</FilePath>
             </File>
+            <File>
+              <FileName>Wdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Bsw\Mcal\Wdg.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
